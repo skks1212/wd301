@@ -1,5 +1,6 @@
 import './App.css';
 import TaskCard from './TaskCard';
+import React from 'react';
 
 function App() {
 
@@ -44,7 +45,7 @@ function App() {
         Graduation Final Year Project (Revamp College Website)
       </span>
       <div className="flex justify-center gap-5 mt-10">
-        {[["Pending", pendingTasks], ["Completed", completedAtDateTasks]].map(([title, tasks]) => (
+        {([["Pending", pendingTasks], ["Completed", completedAtDateTasks]] as [string, typeof pendingTasks][]).map(([title, tasks]) => (
           <div className="flex-1 rounded-2xl border border-gray-200 bg-gray-100 p-4">
             <h2 className="text-2xl font-bold text-center mb-4">
               {title}
