@@ -10,9 +10,6 @@ interface TaskFormState {
     description: string;
 }
 class TaskForm extends React.Component<TaskFormProps, TaskFormState> {
-    constructor(props: TaskFormProps) {
-        super(props);
-    }
     addTask: React.FormEventHandler<HTMLFormElement> = (event) => {
         event.preventDefault();
         const newTask = {
